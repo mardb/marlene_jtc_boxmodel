@@ -1,0 +1,53 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+/* BOX MODEL VISUALIZATION FOR ALL ELEMENTS USING .box-demo */
+.box-demo {
+  border: 3px solid red; /* Border */
+  padding: 16px; /* Padding */
+  margin: 20px; /* Margin */
+  background-color: rgba(173, 216, 230, 0.4); /* Content/Padding area tint */
+  position: relative;
+}
+
+/* MARGIN visualization layer (outer highlight) */
+.box-demo::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: rgba(255, 228, 181, 0.35); /* Light tan margin highlight */
+  z-index: -1;
+}
+
+/* UL LIST CONTAINER */
+.list-demo {
+  background-color: rgba(144, 238, 144, 0.35); /* green tint */
+}
+
+/* LIST ITEMS */
+.list-demo li.box-demo {
+  background-color: rgba(66, 170, 245, 0.35); /* blue-gray tint */
+}
+
+/* BUTTONS */
+button.box-demo {
+  background-color: rgba(242, 184, 155, 0.4); /* pink */
+  cursor: pointer;
+}
+
+/* LINKS */
+.link-demo {
+  display: inline-block;      /* makes padding & margin visible */
+  border: 2px solid red;      /* border layer */
+  padding: 8px;               /* padding layer */
+  margin: 8px;                /* margin layer */
+  background-color: rgba(173, 216, 230, 0.4); /* content area color */
+  text-decoration: none;      /* optional: remove underline */
+  color: blue;     
+}
